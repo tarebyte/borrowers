@@ -32,7 +32,7 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self' 'self' 'unsafe-inline' 'unsafe-eval'",
       'font-src': "'self'",
-      'connect-src': "'self'",
+      'connect-src': "'self' http://api.ember-cli-101.com",
       'img-src': "'self'",
       'style-src': "'self' 'unsafe-inline'",
       'media-src': "'self'"
