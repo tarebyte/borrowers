@@ -14,12 +14,22 @@ export default Ember.Component.extend({
     }
   },
 
+  // Getting an error
+  // type error this.get(...) undefined
+  //
+  // setObserver: function() {
+  //   this.addObserver('model.state', this, this.stateChanged);
+  //   // we need to call get on the property so the observers are setup
+  //   // see for more info http://cl.ly/1f0Y1v2A1G04
+  //
+  //   this.get('model').get('state');
+  // }.on('init'),
+
   stateChanged: function() {
     var article = this.get('article');
 
     if (article.get('isDirty') && !article.get('isSaving')) {
       Ember.run.once(this, this.autoSave);
     }
-
-  }.on('init').observes('article.state')
+  }.observes('article.state').on('init')
 });
