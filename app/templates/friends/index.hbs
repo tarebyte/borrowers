@@ -1,6 +1,8 @@
-<table class="primary"> <thead>
+<table class="primary friends-table"> <thead>
     <tr>
-      <th>Name</th> <th>Articles</th> <th></th>
+      <th {{action "setSortBy" "firstName"}}> Name</th>
+      <th {{action "setSortBy" "totalArticles"}}> Articles</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
